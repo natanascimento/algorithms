@@ -1,0 +1,25 @@
+[project]
+name = "pyalgo"
+version = "0.1.0"
+description = "Algorithms using python"
+authors = [
+    {name = "Natan Nascimento", email = "contato@natanascimento.com"},
+]
+dependencies = [
+    "pytest>=8.3.2",
+]
+requires-python = "==3.12.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = false
+
+
+[tool.pdm.scripts]
+start = {call = "app:start"}
+test = "pytest -vv"
